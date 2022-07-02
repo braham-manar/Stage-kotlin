@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.stagekotlin.fragment.LoginFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.stagekotlin.fragment.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/down_Fragment"
+        android:name="com.example.stagekotlin.fragment.Down_Fragment"
+        android:label="fragment_down_"
+        tools:layout="@layout/fragment_down_" />
+    <fragment
+        android:id="@+id/fav_Fragment"
+        android:name="com.example.stagekotlin.Recycle_Fragment"
+        android:label="fragment_fav_"
+        tools:layout="@layout/fragment_recycle_" />
+    <fragment
+        android:id="@+id/notify_Fragment"
+        android:name="com.example.stagekotlin.fragment.Recycler_CardView_Fragment"
+        android:label="fragment_notify_"
+        tools:layout="@layout/fragment_notify_" />
+
+
+</navigation>

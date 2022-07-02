@@ -70,6 +70,7 @@ class Recycle_Fragment : Fragment() {
             adapter = RecyclerAdapter()
             ( adapter  as RecyclerAdapter).setDataToAdapter(companyList)
         }
+
     }
 
 

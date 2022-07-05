@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.stagekotlin.*
 import kotlinx.android.synthetic.main.fragment_retrofit.*
+import kotlinx.coroutines.flow.callbackFlow
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -49,7 +50,7 @@ class retrofitFragment : Fragment() {
 
              val responseBody=response.body()!!
 
-               myAdapter= activity?.let { MyAdapter(it,responseBody.hits) }!!
+               myAdapter=MyAdapter(call,responseBody.hits)
                 myAdapter.notifyDataSetChanged()
                 recycler.adapter=myAdapter
              /* for (MyData in responseBody.hits){

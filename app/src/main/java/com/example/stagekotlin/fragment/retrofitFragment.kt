@@ -1,28 +1,31 @@
 package com.example.stagekotlin.fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.stagekotlin.*
-import com.example.stagekotlin.models.MyData
-import com.example.stagekotlin.models.MyDataItem
-import kotlinx.android.synthetic.main.fragment_down_.*
 import kotlinx.android.synthetic.main.fragment_retrofit.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.StringBuilder
 
 const val Basicaly_URL="https://pixabay.com/api/"
+lateinit var myAdapter: MyAdapter
+lateinit var linearLayoutManager: LinearLayoutManager
 class retrofitFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        recycler.setHasFixedSize(true)
+        linearLayoutManager= LinearLayoutManager(activity)
+        recycler.layoutManager= linearLayoutManager
         getMyHit()
 
     }
@@ -45,13 +48,16 @@ class retrofitFragment : Fragment() {
                 Log.i("test_retrofit", "onResponse: ")
 
              val responseBody=response.body()!!
-                val MystringBuilder=StringBuilder()
-              for (MyData in responseBody.hits){
+
+               myAdapter= activity?.let { MyAdapter(it,responseBody.hits) }!!
+                myAdapter.notifyDataSetChanged()
+                recycler.adapter=myAdapter
+             /* for (MyData in responseBody.hits){
                     MystringBuilder.append(MyData.id)
                     MystringBuilder.append("\n")
 
 
-                }
+                }*/
                 // MystringBuilder.append(response.body()?.hits)
 
                 //recycler =MystringBuilder

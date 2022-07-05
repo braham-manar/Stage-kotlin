@@ -29,15 +29,20 @@ class HomeFragment : Fragment() {
 
 
         fav_btn.setOnClickListener(){
-            Log.i("test_click", "fav_btn: clicked ")
+            Log.i("test_click", "recycle_btn: clicked ")
             findNavController().navigate(R.id.fav_Fragment)
         }
-     notif_btn.setOnClickListener(){
+        retro_btn.setOnClickListener(){
             Log.i("test_click", "fav_btn: clicked ")
+            findNavController().navigate(R.id.retrofitFragment)
+
+        }
+     notif_btn.setOnClickListener(){
+            Log.i("test_click", "notif_btn: clicked ")
             findNavController().navigate(R.id.notify_Fragment)
         }
         down_btn.setOnClickListener(){
-            Log.i("test_click", "fav_btn: clicked ")
+            Log.i("test_click", "down_btn: clicked ")
             findNavController().navigate(R.id.down_Fragment)
         }
 

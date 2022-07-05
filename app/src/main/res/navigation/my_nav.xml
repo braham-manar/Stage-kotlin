@@ -32,6 +32,11 @@
         android:name="com.example.stagekotlin.fragment.Recycler_CardView_Fragment"
         android:label="fragment_notify_"
         tools:layout="@layout/fragment_notify_" />
+    <fragment
+        android:id="@+id/retrofitFragment"
+        android:name="com.example.stagekotlin.fragment.retrofitFragment"
+        android:label="fragment_retrofit"
+        tools:layout="@layout/fragment_retrofit" />
 
 
 </navigation>

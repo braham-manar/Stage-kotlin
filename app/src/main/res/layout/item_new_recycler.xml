@@ -9,39 +9,60 @@
     android:layout_margin="15dp"
     android:foreground="?selectableItemBackground"
     android:clickable="true">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
 
 
         <ImageView
             android:id="@+id/Iv_Item"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/img"
-            android:scaleType="centerCrop"/>
-        <TextView
-            android:id="@+id/TV_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="this is a simple image"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
-            />
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_favoris"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true" />
+
         <TextView
             android:id="@+id/TV_Desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="this is the new detail"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="5dp"
-            />
-    </LinearLayout>
+            android:layout_marginStart="16dp"
 
+            android:text="this is the new detail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TV_title" />
+
+        <TextView
+            android:id="@+id/TV_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="this is a simple image"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:translationZ="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Iv_Item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

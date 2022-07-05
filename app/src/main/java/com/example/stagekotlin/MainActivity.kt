@@ -3,11 +3,8 @@ package com.example.stagekotlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.stagekotlin.R
 
 
 class MainActivity : AppCompatActivity() {

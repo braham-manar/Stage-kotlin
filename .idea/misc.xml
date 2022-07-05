@@ -15,11 +15,12 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/fragment_notify_.xml" value="0.1111111111111111" />
         <entry key="app/src/main/res/layout/fragment_recycle_.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_retrofit.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_retrofit.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_retrofit_.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/item_new_recycler.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_recycler_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/new_item_recycler.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/url_item.xml" value="0.18385416666666668" />
       </map>
     </option>
   </component>

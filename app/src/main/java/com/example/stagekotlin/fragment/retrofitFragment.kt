@@ -44,34 +44,24 @@ class retrofitFragment : Fragment() {
             override fun onResponse(call: Call<MyRetrofit>, response: Response<MyRetrofit>) {
                 Log.i("test_retrofit", "onResponse: ")
 
-             //  val responseBody=response.body()!!
+             val responseBody=response.body()!!
                 val MystringBuilder=StringBuilder()
-              /*for (MyData in responseBody){
+              for (MyData in responseBody.hits){
                     MystringBuilder.append(MyData.id)
                     MystringBuilder.append("\n")
 
 
-                }*/
+                }
+                // MystringBuilder.append(response.body()?.hits)
 
-
-
-                MystringBuilder.append(response.body()?.total)
-
-                TV_retro.text=MystringBuilder
-
+                //recycler =MystringBuilder
             }
 
             override fun onFailure(call: Call<MyRetrofit>, t: Throwable) {
                 Log.i("test_retrofit", "onFailure: ")
             }
         })
-
-
-
-
-
-
-}}
+    }}
 
 
 
